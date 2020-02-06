@@ -1,4 +1,7 @@
 # Readme
+
+Check https://github.com/CMPUT350-StarCraft2-RushBot/Code for more detailed information 
+
 ##--------------------------------------------------------------------------------------------------------------
 
 Most of the bot functions are from s2clinet-api/examples/common/bot_examples.cc
