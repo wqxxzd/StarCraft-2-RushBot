@@ -10,6 +10,9 @@
 #include "sc2utils/sc2_manage_process.h"
 #include "sc2utils/sc2_arg_parser.h"
 
+#include "LadderInterface.h"
+
+
 using namespace sc2;
 
 #include "helpers.h"
@@ -28,21 +31,7 @@ private:
 // Private functions
 };
 
-int main(int argc, char* argv[]) {
-    Coordinator coordinator;
-    coordinator.LoadSettings(argc, argv);
-
-    RushBot mybot;
-    coordinator.SetParticipants({
-        CreateParticipant(Race::Terran, &mybot),
-        CreateComputer(Race::Zerg, Difficulty::HardVeryHard)
-    });
-
-    coordinator.LaunchStarcraft();
-    coordinator.StartGame(sc2::kMapBelShirVestigeLE);
-
-    while (coordinator.Update()) {
-    }
-
-    return 0;
+int main(int argc, char* argv[])
+{
+    RunBot(argc, argv, new RushBot(), sc2::Race::Terran);
 }
