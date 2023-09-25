@@ -5,7 +5,6 @@ virtual void OnGameStart() final {
     game_info_ = Observation()->GetGameInfo();
 }
 
-
 virtual void OnStep() final {
     TryBuildRefinery();
     ManageWorkers(UNIT_TYPEID::TERRAN_SCV, ABILITY_ID::HARVEST_GATHER, UNIT_TYPEID::TERRAN_REFINERY);
